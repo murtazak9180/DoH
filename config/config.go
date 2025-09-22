@@ -7,14 +7,14 @@ import (
 )
 
 type Config struct {
-	Port        string `mapstructure:"port"`
-	CertPath    string `mapstructure:"cert_path"`
-	KeyPath     string `mapstructure:"key_path"`
-	UpstreamDNS string `mapstructure:"upstream_dns"`
+	Port         string `mapstructure:"port"`
+	CertPath     string `mapstructure:"cert_path"`
+	KeyPath      string `mapstructure:"key_path"`
+	ResolverMode string `mapstructure:"resolver_mode"`
+	UpstreamDNS  string `mapstructure:"upstream_dns"`
 }
 
 func Load() Config {
-	//load config from a yaml or similar file.
 	var cfg Config
 
 	viper.SetConfigName("config")
